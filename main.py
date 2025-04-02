@@ -12,9 +12,12 @@ def main():
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
     filepath=sys.argv[1]
-    chars = order_stats(count_chars(get_book_text(filepath)))
-    words = count_words(get_book_text(filepath))
+    text = get_book_text(filepath)
+    chars = order_stats(count_chars(text))
+    words = count_words(text)
     print_stats(chars, filepath, words)
+
+
     
 
   

@@ -3,14 +3,14 @@ def count_words(book):
     return len(words)
    
 def count_chars(book):
-    words = book.split()
     chars = {}
-    for word in words:
-        for char in word: 
-            if char.lower() in chars:
-                chars[char.lower()] += 1
-            else: 
-                chars[char.lower()] = 1
+ 
+    for char in book:
+       lower_char = char.lower()
+       if lower_char in chars:
+           chars[lower_char] += 1
+       else: 
+           chars[lower_char] = 1
     return chars
 
 
